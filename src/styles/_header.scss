@@ -1,0 +1,47 @@
+
+.navigation-bar{
+  display: flex;
+  font-family: $fontOswald;
+  background-color: $blackColor;
+  //margin:0.5em 0 ;
+  padding:0.5em 0 ;
+  //height: 5vh;
+  //text-decoration: none;
+  //text-color:$fontColor;
+
+  .navigation-bar-item-logo{
+
+    color: rgba(255, 0, 0, 0.55);
+    font-size: 1.6em;
+    font-weight: 700;
+    //margin-left: 2em;
+    text-decoration: none;
+    margin: 0 1em 0 0.5em;
+    span{
+      //display: flex;
+      color: $greyFontColor;
+      font-size: 0.4em;
+      text-decoration: none;
+      //margin: 0 1em 0 0.5em;
+      text-align: center;
+    }
+
+  }
+  .navigation-bar-item{
+    color: $greyFontColor;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.5em;
+    margin: 0 0.1em;
+    //padding:0 0.1em  ;
+     padding:0 1em  ;
+    //background-color: $blackColor;
+    &:hover{
+      //background-color: $brighterBlackColor;
+      color: $whiteFontColor;
+      transition: 0.4s;
+      //border: 1px solid $whiteFontColor;
+      //border-radius:50px;
+    }
+  }
+}

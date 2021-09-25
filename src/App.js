@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState, useEffect} from 'react';
+import './main.scss';
+import Header from "./components/header";
+import Body from "./components/body";
+import gameCard from "./components/gameCard";
+// import axios from 'axios';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        GAME LIBRARY
-        </a>
-      </header>
-    </div>
-  );
+    // const [GameList, SetGameList] = useState([]);
+    const [topGame, SetTopGame] = useState([]);
+    // const [search, SetSearch] = useState("");
+
+    useEffect(() => {
+        fetch(`https://api.rawg.io/api/games`)
+            .then(res => res.json())
+            .then((data) => {
+                console.log(data)
+                SetTopGame(data)
+            })
+    }, []);
+
+    return (
+        <>
+            <Header/>
+            <Body>
+                <div> {topGame.length > 0 && topGame.map((game) => <gameCard/>)}</div>
+            </Body>
+        </>
+    );
 }
 
 export default App;
+
+
+// useEffect(()=>{
+//    fetch("https://api.rawg.io/api/games").then(res=>{
+//         console.log(res.data.slice(0,10))
+//     })
+// },[]);
+
+// useEffect(()=>{
+//     fetch(`https://api.rawg.io/api/games`)
+//         .then(res=>res.json())
+//     .then((data)=>{
+//         console.log(data)
+//         SetTopGame(data)
+//     })
+// },[]);
