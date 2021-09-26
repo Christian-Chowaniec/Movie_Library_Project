@@ -1,0 +1,33 @@
+.movie_container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.movieCard{
+  width: 170px;
+  margin: 0.5em ;
+  //margin: 0.5em auto;
+
+  img{
+    max-width:100%;
+
+  }
+  .movie-info{
+    background-color: $blackColor;
+    color: $fontColor;
+    //display: flex;
+    .movie-info-title{
+      color: #fff;
+      margin: 1em;
+      display: flex;
+
+    }
+    .movie-info-vote_average{
+      margin: 0 1em;
+
+    }
+    .movie-info-date{
+
+    }
+
+  }
+}

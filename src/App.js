@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 import './main.scss';
 import Header from "./components/header";
-import Body from "./components/body";
+// import Body from "./components/body";
 import Movie from "./components/movieCard";
 // import axios from 'axios';
 
@@ -26,10 +26,10 @@ function App() {
     return (
         <>
             <Header/>
-            <div>
+            <div className="movie_container">
                 {movies.length > 0 &&
                 movies.map((movie) => <Movie key={movie.id } {...movie}/>
-            )}</div>
+                )}</div>
         </>
     );
 }
