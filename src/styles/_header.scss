@@ -8,22 +8,26 @@
   //height: 5vh;
   //text-decoration: none;
   //text-color:$fontColor;
+  border-bottom: 3px solid rgba(255, 0, 0, 0.55);
 
   .navigation-bar-item-logo{
 
-    color: rgba(255, 0, 0, 0.55);
+    //color: rgba(255, 0, 0, 0.55);
+    //color: $greyFontColor;
+    color: #fff;
     font-size: 1.6em;
     font-weight: 700;
     //margin-left: 2em;
     text-decoration: none;
-    margin: 0 1em 0 0.5em;
+    margin:0 0.5em;
     span{
       //display: flex;
-      color: $greyFontColor;
-      font-size: 0.4em;
+      color: rgba(255, 0, 0, 0.55);
+      //color: $greyFontColor;
+      font-size: 0.6em;
       text-decoration: none;
       //margin: 0 1em 0 0.5em;
-      text-align: center;
+      //text-align: center;
     }
 
   }

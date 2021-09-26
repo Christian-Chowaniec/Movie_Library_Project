@@ -2,47 +2,36 @@ import {useState, useEffect} from 'react';
 import './main.scss';
 import Header from "./components/header";
 import Body from "./components/body";
-import gameCard from "./components/gameCard";
+import Movie from "./components/movieCard";
 // import axios from 'axios';
+
+const featured_api = "https://api.themoviedb.org/3/movie/popular?api_key=76578856efa3b3119d5ebe76dc5498b0&language=en-US&page=1";
 
 function App() {
     // const [GameList, SetGameList] = useState([]);
-    const [topGame, SetTopGame] = useState([]);
+    // const [topGame, SetTopGame] = useState([]);
     // const [search, SetSearch] = useState("");
+    const [movies, SetMovies] = useState([]);
 
     useEffect(() => {
-        fetch(`https://api.rawg.io/api/games`)
+        fetch(featured_api)
             .then(res => res.json())
-            .then((data) => {
+            .then(data => {
                 console.log(data)
-                SetTopGame(data)
-            })
+                SetMovies(data.results)
+            });
     }, []);
+
 
     return (
         <>
             <Header/>
-            <Body>
-                <div> {topGame.length > 0 && topGame.map((game) => <gameCard/>)}</div>
-            </Body>
+            <div>
+                {movies.length > 0 &&
+                movies.map((movie) => <Movie key={movie.id } {...movie}/>
+            )}</div>
         </>
     );
 }
 
 export default App;
-
-
-// useEffect(()=>{
-//    fetch("https://api.rawg.io/api/games").then(res=>{
-//         console.log(res.data.slice(0,10))
-//     })
-// },[]);
-
-// useEffect(()=>{
-//     fetch(`https://api.rawg.io/api/games`)
-//         .then(res=>res.json())
-//     .then((data)=>{
-//         console.log(data)
-//         SetTopGame(data)
-//     })
-// },[]);
