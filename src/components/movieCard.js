@@ -1,7 +1,7 @@
 import React from 'react'
 
 const img_api = "https://image.tmdb.org/t/p/w500";
-const Movie = ({title,poster_path,overview,vote_average,release_date,backdrop_path}) => <div className="movieCard">
+const Movie = ({title,poster_path,overview,vote_average,release_date,backdrop_path,runtime}) => <div className="movieCard">
     <div className="gg-more-alt_icon">
         {/*<i className="gg-chevron-down"></i>*/}
         {/*<i className="gg-more-alt"></i>*/}
@@ -14,6 +14,7 @@ const Movie = ({title,poster_path,overview,vote_average,release_date,backdrop_pa
     <div className="movie-info">
 
         <h3 className="movie-info-title">{title}</h3>
+        {/*<h3 className="movie-info-title">{runtime}</h3>*/}
        {/*<div className="movie-info-bottom">*/}
        {/*    <div className="movie-info-vote_average">{vote_average}</div>*/}
        {/*    /!*<span className="movie-info-vote_average">{vote_average}</span>*!/*/}
