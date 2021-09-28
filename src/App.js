@@ -7,6 +7,7 @@ import Movie from "./components/movieCard";
 
 const featured_api = "https://api.themoviedb.org/3/movie/popular?api_key=76578856efa3b3119d5ebe76dc5498b0&language=en-US&page=1";
 
+
 function App() {
     // const [GameList, SetGameList] = useState([]);
     // const [topGame, SetTopGame] = useState([]);
