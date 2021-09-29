@@ -1,13 +1,22 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import Movie from "../movieCard";
 
 const Popular = () => {
+    const [movies, SetMovies] = useState([]);
+    const featured_api = "https://api.themoviedb.org/3/movie/popular?api_key=76578856efa3b3119d5ebe76dc5498b0&language=en-US&page=1";
+
+    useEffect(() => {
+        fetch(featured_api)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                SetMovies(data.results)
+            });
+    }, []);
+
     return (
-        <div>
-            <h2>Popular</h2>
-            <h2>Popular</h2>
-            <h2>Popular</h2>
-            <h2>Popular</h2>
-        </div>
+        <div className="movie_container">
+            {movies.length > 0 && movies.map((movie) => <Movie key={movie.id } {...movie}/>)}</div>
     );
 };
 

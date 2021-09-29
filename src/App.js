@@ -4,7 +4,7 @@ import {
     BrowserRouter as Router,
     Switch,
     Route
-    , Link
+    // , Link
 } from "react-router-dom";
 import './main.scss';
 import Nav from "./components/navigation/nav";
@@ -13,7 +13,7 @@ import TvSerials from "./components/navigation/tv-serials";
 import Movies from "./components/navigation/movies";
 import Popular from "./components/navigation/popular";
 import MyList from "./components/navigation/my-list";
-import SearchBar from "./components/navigation/search-bar";
+// import SearchBar from "./components/navigation/search-bar";
 
 function App() {
 
