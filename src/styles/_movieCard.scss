@@ -77,6 +77,7 @@
       //border-radius: 10px;
       border-radius: 10px 10px 0 0;
       box-shadow: 0 0 1em black;
+      border-bottom: 4px solid $accentColor;
 
       &:hover{
         .movieCard{

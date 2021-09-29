@@ -1,6 +1,17 @@
 import React from 'react';
+import {useState, useEffect} from 'react';
 
 const Header = () => {
+    // const [search, SetSearch] = useState("");
+
+    // const handleOnSubmit = (e) => {
+    //     e.preventDefault();
+    // }
+
+    // const handleOnChange = (e) => {
+    //     SetSearch(e.target.value);
+    // }
+
     return (
         <nav className="navigation-bar">
             <a className="navigation-bar-item-logo" href="/home"> CC<span> 🎬</span> </a>
@@ -16,8 +27,15 @@ const Header = () => {
                         <i className="gg-search"></i>
                     </div>
                 </button>
-                <input type="text" className="input-search" placeholder="Type to Search..."/>
+
+                    <input type="text"
+                           className="input-search"
+                           placeholder="Type to Search..."
+                           // value={search}
+                    />
+
             </div>
         </nav>
-)};
+    )
+};
 export default Header;
