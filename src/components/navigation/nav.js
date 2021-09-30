@@ -9,7 +9,7 @@ const Nav = () => {
         <nav>
             <ul className="navigation-bar">
 
-                <Router>
+
 
                     <Link to="/">
                         <li className="navigation-bar-item-logo">CC<span> 🎬</span></li>
@@ -37,7 +37,6 @@ const Nav = () => {
 
                     <SearchBar/>
 
-                </Router>
             </ul>
 
         </nav>
