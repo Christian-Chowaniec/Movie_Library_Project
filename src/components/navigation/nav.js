@@ -1,6 +1,6 @@
 import React from 'react';
 // import {Link} from "react-router-dom";
-import {BrowserRouter as Router, Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 import SearchBar from "./search-bar";
 
 
@@ -8,8 +8,6 @@ const Nav = () => {
     return (
         <nav>
             <ul className="navigation-bar">
-
-
 
                     <Link to="/">
                         <li className="navigation-bar-item-logo">CC<span> 🎬</span></li>

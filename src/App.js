@@ -1,12 +1,7 @@
 import React from 'react';
-// import {useState, useEffect} from 'react';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route
-    // , Link
-} from "react-router-dom";
 import './main.scss';
+// import {useState, useEffect} from 'react';
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Nav from "./components/navigation/nav";
 import Home from "./components/navigation/home";
 import TvSerials from "./components/navigation/tv-serials";
