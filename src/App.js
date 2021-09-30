@@ -1,6 +1,5 @@
 import React from 'react';
 import './main.scss';
-// import {useState, useEffect} from 'react';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Nav from "./components/navigation/nav";
 import Home from "./components/navigation/home";
@@ -8,10 +7,8 @@ import TvSerials from "./components/navigation/tv-serials";
 import Movies from "./components/navigation/movies";
 import Popular from "./components/navigation/popular";
 import MyList from "./components/navigation/my-list";
-// import SearchBar from "./components/navigation/search-bar";
 
 function App() {
-
 
     return (
         <Router>
@@ -29,7 +26,6 @@ function App() {
         </Router>
     );
 }
-
 
 export default App;
 

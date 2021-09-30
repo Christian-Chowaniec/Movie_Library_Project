@@ -14,8 +14,8 @@ const Movie = ({title, poster_path, overview, vote_average, release_date, backdr
             <img src={img_api + poster_path} alt={title}/>
 
             <div className="img-grey-bar">
-                <span className="movie-info-vote_average"> {vote_average}</span>
-                <span className="movie-info-date"> {release_date.slice(0, 4)}</span>
+                {/*<span className="movie-info-vote_average"> {vote_average}</span>*/}
+                {/*<span className="movie-info-date"> {release_date.slice(0, 4)}</span>*/}
             </div>
         </div>
 

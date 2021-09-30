@@ -4,9 +4,6 @@ const TvSerials = () => {
     return (
         <div>
             <h2>TVSerials</h2>
-            <h2>TVSerials</h2>
-            <h2>TVSerials</h2>
-            <h2>TVSerials</h2>
         </div>
     );
 };

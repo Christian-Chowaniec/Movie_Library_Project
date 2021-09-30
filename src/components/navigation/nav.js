@@ -1,8 +1,6 @@
 import React from 'react';
-// import {Link} from "react-router-dom";
 import {Link} from "react-router-dom";
 import SearchBar from "./search-bar";
-
 
 const Nav = () => {
     return (
@@ -36,7 +34,6 @@ const Nav = () => {
                     <SearchBar/>
 
             </ul>
-
         </nav>
     );
 };
