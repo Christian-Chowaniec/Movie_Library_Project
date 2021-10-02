@@ -30,14 +30,16 @@ const Movies = () => {
             <div className="my-container">
                 <div>
                     <h2 className="trending-title">Movies:</h2>
-                    <Genres
-                        type="movie"
-                        selectedGenres={selectedGenres}
-                        setSelectedGenres={setSelectedGenres}
-                        genres={genres}
-                        setGenres={setGenres}
-                        setPage={setPage}
-                    />
+                    <div className="d-flex justify-content-center">
+                        <Genres
+                            type="movie"
+                            selectedGenres={selectedGenres}
+                            setSelectedGenres={setSelectedGenres}
+                            genres={genres}
+                            setGenres={setGenres}
+                            setPage={setPage}
+                        />
+                    </div>
 
                     <div className="single-card-container">
                         {

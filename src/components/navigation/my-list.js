@@ -1,5 +1,7 @@
 import AddObject from "../add-object/add-object"
 import {Switch, Route, Link} from "react-router-dom";
+import Button from "@mui/material/Button";
+import React from "react";
 
 const MyList = () => {
 
@@ -11,7 +13,8 @@ const MyList = () => {
 
             <div className="my-container">
                 <Link to="/my-list/add">
-                    <button> ADD MOVIE</button>
+                    {/*<button> ADD MOVIE</button>*/}
+                    <Button variant="contained">ADD MOVIE</Button>
                 </Link>
             </div>
 

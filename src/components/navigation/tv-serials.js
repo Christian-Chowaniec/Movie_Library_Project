@@ -32,16 +32,18 @@ const TvSerials = () => {
             <div className="my-container">
                 <div>
 
-                    <h2 className="trending-title">TV Serials:</h2>
+                    <h2 className="trending-title">TV Series:</h2>
 
-                    <Genres
-                        type="tv"
-                        selectedGenres={selectedGenres}
-                        setSelectedGenres={setSelectedGenres}
-                        genres={genres}
-                        setGenres={setGenres}
-                        setPage={setPage}
-                    />
+                    <div className="d-flex justify-content-center">
+                        <Genres
+                            type="tv"
+                            selectedGenres={selectedGenres}
+                            setSelectedGenres={setSelectedGenres}
+                            genres={genres}
+                            setGenres={setGenres}
+                            setPage={setPage}
+                        />
+                    </div>
 
                     <div className="single-card-container">
                         {

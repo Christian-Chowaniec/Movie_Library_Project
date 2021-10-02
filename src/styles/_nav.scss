@@ -11,12 +11,12 @@
   //text-decoration: none;
   //text-color:$fontColor;
   border-bottom: 3px solid $accentColor;
-  li{
-    text-decoration: none;
-  }
-  ul{
-    text-decoration: none;
-  }
+  //li{
+  //  text-decoration: none;
+  //}
+  //ul{
+  //  text-decoration: none;
+  //}
   a{
     text-decoration: none;
     border: none;
@@ -81,6 +81,62 @@
   height: fit-content;
   position: relative;
 }
+
+
+.input-search-circle {
+  height: 32px;
+  width: 32px;
+  border-style: none;
+  padding: 16px;
+  outline: none;
+  border-radius: 25px;
+  transition: all .5s ease-in-out;
+  background-color: $accentColor;
+  color: #fff;
+  font-family: $fontOswald;
+  font-size: 0.8em;
+}
+.input-search-circle{
+  height: 32px;
+  width: 32px;
+  border-style: none;
+  padding: 16px;
+  outline: none;
+  border-radius: 25px;
+  transition: all .5s ease-in-out;
+  background-color: $accentColor;
+  color: #fff;
+  font-family: $fontOswald;
+  font-size: 0.8em;
+}
+.btn-search-circle{
+  z-index: 9999;
+  width: 50px;
+  height: 50px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  left: -20px;
+  top: -3px;
+  color: #fff;
+  background-color:transparent;
+  pointer-events: painted;
+}
+.gg-search_icon-circle{
+  margin-left: 23px;
+  margin-top: -18px;
+  color:$fontColor;
+  &:hover{
+    color: #fff;
+
+  }
+}
+
+
 .input-search{
   height: 32px;
   width: 32px;
@@ -125,7 +181,7 @@
   border-radius: 50%;
   position: absolute;
   right: 0px;
-  color:#ffffff ;
+  color: #fff;
 
   background-color:transparent;
   pointer-events: painted;
