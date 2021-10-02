@@ -4,7 +4,24 @@ const image_api = "https://image.tmdb.org/t/p/w500";
 const image_unavailable = "https://www.peakndt.com/wp-content/uploads/2017/02/No_picture_available.png";
 
 
-const SingleCard = ({key, id, poster, title, date, media_type, vote_average, overview}) => {
+const SingleCard = ({ id, poster, title, date, media_type, vote_average, overview}) => {
+    const addToMyList = () => {
+        fetch('http://localhost:3000/favorites', {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                id,
+                poster,
+                title,
+                date,
+                media_type,
+                vote_average,
+                overview
+            })
+        })
+    }
     return (
         <>
             <div className="single-card-box">
@@ -18,6 +35,7 @@ const SingleCard = ({key, id, poster, title, date, media_type, vote_average, ove
                     <span className="single-card-info-vote"> {vote_average}</span>
                     {/*<span className="single-card-info-vote"> {overview}</span>*/}
                 </div>
+                <button onClick={addToMyList}>add</button>
             </div>
         </>
     );

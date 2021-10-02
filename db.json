@@ -1,0 +1,52 @@
+{
+  "favorites": [
+    {
+      "id": 567748,
+      "poster": "/l2X5hPbamzNeeaFEPdNIiaVBA2.jpg",
+      "title": "The Guilty",
+      "date": "2021-09-24",
+      "media_type": "movie",
+      "vote_average": 7
+    },
+    {
+      "id": 639721,
+      "poster": "/xYLBgw7dHyEqmcrSk2Sq3asuSq5.jpg",
+      "title": "The Addams Family 2",
+      "date": "2021-10-01",
+      "media_type": "movie",
+      "vote_average": 5.5
+    },
+    {
+      "id": 370172,
+      "poster": "/iUgygt3fscRoKWCV1d0C7FbM9TP.jpg",
+      "title": "No Time to Die",
+      "date": "2021-09-29",
+      "media_type": "movie",
+      "vote_average": 7.2
+    },
+    {
+      "id": 524369,
+      "poster": "/oK25ohM3qndhEoth3bP1CZeaVEN.jpg",
+      "title": "The Many Saints of Newark",
+      "date": "2021-09-22",
+      "media_type": "movie",
+      "vote_average": 6.8
+    },
+    {
+      "id": 740925,
+      "poster": "/bZUostLcCZYgcuBuAjmuSkBggiQ.jpg",
+      "title": "No One Gets Out Alive",
+      "date": "2021-09-29",
+      "media_type": "movie",
+      "vote_average": 6.1
+    },
+    {
+      "id": 580489,
+      "poster": "/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg",
+      "title": "Venom: Let There Be Carnage",
+      "date": "2021-09-30",
+      "media_type": "movie",
+      "vote_average": 7.4
+    }
+  ]
+}

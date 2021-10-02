@@ -9,6 +9,7 @@ import Popular from "./components/navigation/popular";
 import MyList from "./components/navigation/my-list";
 // import SearchBar from "./components/navigation/search-bar";
 import Search from "./components/search";
+import AddObject from "./components/add-object/add-object";
 // import AddObject from "./components/add-object/add-object";
 
 function App() {
@@ -32,6 +33,8 @@ function App() {
                     <Route path="/my-list" component={MyList}/>
 
                     <Route path="/search" component={Search}/>
+                    <Route path="/my-list/add" component={AddObject}/>
+
 
                     {/*<Route path="/my-list/add" component={AddObject}/>*/}
                 </Switch>
