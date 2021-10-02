@@ -47,6 +47,46 @@
       "date": "2021-09-30",
       "media_type": "movie",
       "vote_average": 7.4
+    },
+    {
+      "id": 504253,
+      "poster": "/vHdVU0HyyB6k6kuYt8qjwTz9one.jpg",
+      "title": "I Want to Eat Your Pancreas",
+      "date": "2018-09-01",
+      "media_type": "movie",
+      "vote_average": 8.3
+    },
+    {
+      "id": 492999,
+      "poster": "/5tcuowV4HZRxxvDiWn4bmumuZSk.jpg",
+      "title": "Attack on Titan: The Roar of Awakening",
+      "date": "2018-01-13",
+      "media_type": "movie",
+      "vote_average": 8.4
+    },
+    {
+      "id": 330081,
+      "poster": "/53iOetezK5fJsABy1XykJw4WRq3.jpg",
+      "title": "Attack on Titan: Wings of Freedom",
+      "date": "2015-06-27",
+      "media_type": "movie",
+      "vote_average": 8.2
+    },
+    {
+      "id": 714194,
+      "poster": "/10mGHIWt8TkMvnmSlqCChzigwFl.jpg",
+      "title": "Attack on Titan: Chronicle",
+      "date": "2020-07-17",
+      "media_type": "movie",
+      "vote_average": 7.8
+    },
+    {
+      "id": 379088,
+      "poster": "/k4E04qJvSTQYUPOpYp5YYvdrdcc.jpg",
+      "title": "Attack on Titan: Crimson Bow and Arrow",
+      "date": "2013-04-07",
+      "media_type": "movie",
+      "vote_average": 8.2
     }
   ]
 }

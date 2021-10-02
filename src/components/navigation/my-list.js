@@ -1,7 +1,7 @@
 
 import React, {useEffect, useState} from 'react';
-import {Link} from "react-router-dom";
-import Button from "@mui/material/Button";
+// import {Link} from "react-router-dom";
+// import Button from "@mui/material/Button";
 import SingleCard from "../singleContent/single-card";
 
 
@@ -21,10 +21,10 @@ const MyList = () => {
             <h2 className="trending-title">My List:</h2>
 
             <div className="my-container">
-                <Link to="/my-list/add">
-                    {/*<button> ADD MOVIE</button>*/}
-                    <Button variant="contained">ADD MOVIE</Button>
-                </Link>
+                {/*<Link to="/my-list/add">*/}
+                {/*    /!*<button> ADD MOVIE</button>*!/*/}
+                {/*    <Button variant="contained">ADD MOVIE</Button>*/}
+                {/*</Link>*/}
             </div>
 
 
