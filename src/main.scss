@@ -1,6 +1,10 @@
 @import "settings/reset";
 @import "settings/all";
 
-@import "styles/header";
+@import "styles/nav";
 @import "styles/body";
+@import "styles/home";
 @import "styles/movieCard";
+@import "components/singleContent/single-card";
+@import "components/add-object/add-object";
+

@@ -1,23 +1,25 @@
-*{
+* {
   box-sizing: border-box;
 }
-.container {
+
+.my-container {
   margin: 0 auto;
   width: 100%;
   padding: 0 15px;
 }
-body{
+
+body {
   //background-color: $brighterBlackColor;
   //background-color: #141414;
   background-color: rgba(0, 0, 0, 0.49);
   font-family: $fontOswald;
 }
 
-.main-body{
+.main-body {
   //background-color: $brighterBlackColor;
   //height: 100vh;
   //width: 100vw;
-  .main-body-section{
+  .main-body-section {
     background-color: $brighterBlackColor;
   }
 }

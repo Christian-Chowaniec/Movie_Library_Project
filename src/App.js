@@ -7,8 +7,17 @@ import TvSerials from "./components/navigation/tv-serials";
 import Movies from "./components/navigation/movies";
 import Popular from "./components/navigation/popular";
 import MyList from "./components/navigation/my-list";
+// import SearchBar from "./components/navigation/search-bar";
+import Search from "./components/search";
+// import AddObject from "./components/add-object/add-object";
 
 function App() {
+
+    // const [type, setType] = useState([]);
+    // const [title, setTitle] = useState([]);
+    // const [description, setDescription] = useState([]);
+    // const [date, setDate] = useState([]);
+    // const [image, setImage] = useState([]);
 
     return (
         <Router>
@@ -21,27 +30,16 @@ function App() {
                     <Route path="/popular" component={Popular}/>
                     <Route path="/movies" component={Movies}/>
                     <Route path="/my-list" component={MyList}/>
+
+                    <Route path="/search" component={Search}/>
+
+                    {/*<Route path="/my-list/add" component={AddObject}/>*/}
                 </Switch>
+
+
             </div>
         </Router>
     );
 }
 
 export default App;
-
-// const [GameList, SetGameList] = useState([]);
-// const [topGame, SetTopGame] = useState([]);
-// const [search, SetSearch] = useState("");
-// const [movies, SetMovies] = useState([]);
-
-// useEffect(() => {
-//     fetch(featured_api)
-//         .then(res => res.json())
-//         .then(data => {
-//             console.log(data)
-//             SetMovies(data.results)
-//         });
-// }, []);
-// const handleOnSubmit = (e) => {
-//     e.preventDefault();
-// }

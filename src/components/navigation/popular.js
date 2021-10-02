@@ -15,11 +15,14 @@ const Popular = () => {
     }, []);
 
     return (
-        <div className="movie_container">
-            {
-                movies.length > 0 && movies.map((movie) => <Movie key={movie.id} {...movie}/>)
-            }
-        </div>
+        <>
+            <h2 className="trending-title">Popular:</h2>
+            <div className="movie_container">
+                {
+                    movies.length > 0 && movies.map((movie) => <Movie key={movie.id} {...movie}/>)
+                }
+            </div>
+        </>
     );
 };
 

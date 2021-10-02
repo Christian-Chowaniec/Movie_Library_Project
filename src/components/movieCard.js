@@ -24,6 +24,12 @@ const Movie = ({title, poster_path, overview, vote_average, release_date, backdr
 
             {/*<span className="movie-info-title"> {info_api + runtime}</span>*/}
             <h3 className="movie-info-title">{title}</h3>
+            <div className="single-card-info">
+                {/*<h2 className="single-card-info-type">{media_type === "tv" ? "TV Series" : "Movie"}</h2>*/}
+                <span className="single-card-info-date"> {release_date}</span>
+                <span className="single-card-info-vote"> {vote_average}</span>
+                {/*<span className="single-card-info-vote"> {overview}</span>*/}
+            </div>
             {/*<h3 className="movie-info-title">{runtime}</h3>*/}
             {/*<div className="movie-info-bottom">*/}
             {/*    <div className="movie-info-vote_average">{vote_average}</div>*/}
@@ -34,6 +40,8 @@ const Movie = ({title, poster_path, overview, vote_average, release_date, backdr
         <div className="movieCard-description">
             <h2>Description:</h2>
             <p>{overview}</p>
+            {/*<span > {vote_average}</span>*/}
+            {/*<span > {release_date}</span>*/}
         </div>
     </div>
 
