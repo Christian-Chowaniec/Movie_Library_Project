@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import SingleCard from "../singleContent/single-card";
+import SingleCard from "../singleCard/single-card";
 import CustomPagination from "../pagination/CustomPagination";
 import Genres from "../genres";
 import useGenre from "../../hook/useGenre";

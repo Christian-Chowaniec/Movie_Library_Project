@@ -1,92 +1,28 @@
 {
   "favorites": [
     {
-      "id": 567748,
-      "poster": "/l2X5hPbamzNeeaFEPdNIiaVBA2.jpg",
-      "title": "The Guilty",
-      "date": "2021-09-24",
-      "media_type": "movie",
-      "vote_average": 7
+      "id": 124124,
+      "poster": "/ztyJqTdS7RApGgl6ZXmFdGZX3g0.jpg",
+      "title": "Café con aroma de mujer",
+      "date": "2021-05-25",
+      "media_type": "tv",
+      "vote_average": 6.9
     },
     {
-      "id": 639721,
-      "poster": "/xYLBgw7dHyEqmcrSk2Sq3asuSq5.jpg",
-      "title": "The Addams Family 2",
-      "date": "2021-10-01",
-      "media_type": "movie",
-      "vote_average": 5.5
+      "id": 91363,
+      "poster": "/lztz5XBMG1x6Y5ubz7CxfPFsAcW.jpg",
+      "title": "What If...?",
+      "date": "2021-08-11",
+      "media_type": "tv",
+      "vote_average": 8.5
     },
     {
-      "id": 370172,
-      "poster": "/iUgygt3fscRoKWCV1d0C7FbM9TP.jpg",
-      "title": "No Time to Die",
-      "date": "2021-09-29",
+      "id": 347201,
+      "poster": "/1k6iwC4KaPvTBt1JuaqXy3noZRY.jpg",
+      "title": "Boruto: Naruto the Movie",
+      "date": "2015-08-07",
       "media_type": "movie",
-      "vote_average": 7.2
-    },
-    {
-      "id": 524369,
-      "poster": "/oK25ohM3qndhEoth3bP1CZeaVEN.jpg",
-      "title": "The Many Saints of Newark",
-      "date": "2021-09-22",
-      "media_type": "movie",
-      "vote_average": 6.8
-    },
-    {
-      "id": 740925,
-      "poster": "/bZUostLcCZYgcuBuAjmuSkBggiQ.jpg",
-      "title": "No One Gets Out Alive",
-      "date": "2021-09-29",
-      "media_type": "movie",
-      "vote_average": 6.1
-    },
-    {
-      "id": 580489,
-      "poster": "/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg",
-      "title": "Venom: Let There Be Carnage",
-      "date": "2021-09-30",
-      "media_type": "movie",
-      "vote_average": 7.4
-    },
-    {
-      "id": 504253,
-      "poster": "/vHdVU0HyyB6k6kuYt8qjwTz9one.jpg",
-      "title": "I Want to Eat Your Pancreas",
-      "date": "2018-09-01",
-      "media_type": "movie",
-      "vote_average": 8.3
-    },
-    {
-      "id": 492999,
-      "poster": "/5tcuowV4HZRxxvDiWn4bmumuZSk.jpg",
-      "title": "Attack on Titan: The Roar of Awakening",
-      "date": "2018-01-13",
-      "media_type": "movie",
-      "vote_average": 8.4
-    },
-    {
-      "id": 330081,
-      "poster": "/53iOetezK5fJsABy1XykJw4WRq3.jpg",
-      "title": "Attack on Titan: Wings of Freedom",
-      "date": "2015-06-27",
-      "media_type": "movie",
-      "vote_average": 8.2
-    },
-    {
-      "id": 714194,
-      "poster": "/10mGHIWt8TkMvnmSlqCChzigwFl.jpg",
-      "title": "Attack on Titan: Chronicle",
-      "date": "2020-07-17",
-      "media_type": "movie",
-      "vote_average": 7.8
-    },
-    {
-      "id": 379088,
-      "poster": "/k4E04qJvSTQYUPOpYp5YYvdrdcc.jpg",
-      "title": "Attack on Titan: Crimson Bow and Arrow",
-      "date": "2013-04-07",
-      "media_type": "movie",
-      "vote_average": 8.2
+      "vote_average": 7.7
     }
   ]
 }

@@ -4,7 +4,7 @@ import axios from "axios";
 import SearchIcon from '@mui/icons-material/Search';
 // import useGenre from "../hook/useGenre";
 // import Genres from "./genres";
-import SingleCard from "./singleContent/single-card";
+import SingleCard from "./singleCard/single-card";
 import CustomPagination from "./pagination/CustomPagination";
 import {
     Button,

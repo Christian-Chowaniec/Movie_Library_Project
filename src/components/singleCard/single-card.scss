@@ -19,7 +19,8 @@
   img {
     width: 100%;
     border-radius: 15px 15px 0 0;
-    border-bottom: 4px solid $accentColor;
+    //border-bottom: 4px solid $accentColor;
+    //overflow: hidden;
   }
 
 
@@ -49,8 +50,22 @@
   //  height: 5px;
   //  background-color: white;
   //}
+  .single-card-title-bottom{
+    border-top: 4px solid $accentColor;
+    //border-bottom: 4px solid $accentColor;
+    //background-color: $blackColor;
+    overflow: hidden;
+    position: static;
+    z-index: 9999;
 
+  }
 
+.buttons-add-delete{
+  display: none;
+  //overflow: hidden;
+
+}
+  overflow: hidden;
   &:hover {
     //.single-card-info{
     //  background-color: $brighterBlackColor;
@@ -63,11 +78,39 @@
     //  border-top: 3px solid $accentColor;
     //
     //
-    transform: scale(1.03);
+
     //transition-duration: 1ms ease-in-out;
     //transition: 200ms ease-in-out;
-    transition: transform 0.3s ease-in-out;
+
+    img{
+      //display: block;
+      transform: scale(1.03);
+      transition: transform 0.3s ease-in-out;
+
+
+
+
+    }
+    //transform: scale(1.03);
+    //transition: transform 0.3s ease-in-out;
     //transition-delay: 1s;
+    .buttons-add-delete{
+      //display:flex;
+      //overflow: hidden;
+      position: relative;
+      padding: 10px 0;
+      top: 4px;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      background-color: rgba(26, 255, 0, 0.47);
+
+
+      &:hover{
+
+      }
+
+    }
 
   }
 }
