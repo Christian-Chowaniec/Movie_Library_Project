@@ -1,10 +1,9 @@
 import React from 'react';
-
 const image_api = "https://image.tmdb.org/t/p/w500";
 const image_unavailable = "https://www.peakndt.com/wp-content/uploads/2017/02/No_picture_available.png";
 
 
-const SingleCard = ({ id, poster, title, date, media_type, vote_average, overview, onMyList, setUsers}) => {
+const SingleCard = ({id, poster, title, date, media_type, vote_average, overview, onMyList, setUsers}) => {
     const addToMyList = () => {
         fetch('http://localhost:3000/favorites', {
             method: "POST",
@@ -34,18 +33,19 @@ const SingleCard = ({ id, poster, title, date, media_type, vote_average, overvie
     return (
         <>
             <div className="single-card-box">
+
                 <img className="" src={poster ? `${image_api}${poster}` : image_unavailable} alt={title}/>
-                <div className="buttons-add-delete">
-                    {/*{!onMyList && <button onClick={addToMyList}>add</button>}*/}
-
-                    {!onMyList && <i onClick={addToMyList} className="gg-add"></i>}
-
-                    {/*<i className="fas fa-plus-circle"></i>*/}
 
 
-                    {onMyList && <i onClick={deleteFromMyList} className="gg-close-o"></i>}
-                    {/*{onMyList && <button onClick={deleteFromMyList}>remove</button>}*/}
-                </div>
+                {!onMyList && <div onClick={addToMyList} className="buttons-add-delete">
+                    <i className="gg-add"></i>
+                </div>}
+
+
+                {onMyList && <div onClick={deleteFromMyList} className="buttons-add-delete">
+                    <i className="gg-close-o"></i>
+                </div>}
+
 
                 {/*<img className="" src={poster ? `${image_api}${poster}` : image_unavailable} alt={title}/>*/}
 
@@ -66,3 +66,8 @@ const SingleCard = ({ id, poster, title, date, media_type, vote_average, overvie
 };
 
 export default SingleCard;
+
+{/*{!onMyList && <button onClick={addToMyList}>add</button>}*/}
+{/*<i className="fas fa-plus-circle"></i>*/}
+{/*{onMyList && <i onClick={deleteFromMyList} className="gg-close-o"></i>}*/}
+{/*{onMyList && <button onClick={deleteFromMyList}>remove</button>}*/}

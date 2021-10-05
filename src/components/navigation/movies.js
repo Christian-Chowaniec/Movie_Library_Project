@@ -32,6 +32,7 @@ const Movies = () => {
                     <h2 className="trending-title">Movies:</h2>
                     <div className="d-flex justify-content-center">
                         <Genres
+
                             type="movie"
                             selectedGenres={selectedGenres}
                             setSelectedGenres={setSelectedGenres}
@@ -63,6 +64,7 @@ const Movies = () => {
             </div>
         </>
     );
+
 };
 
 export default Movies;

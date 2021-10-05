@@ -1,10 +1,13 @@
 
 .navigation-bar{
+  font-family: $JosefinSans;
+  font-weight: 600;
   text-decoration: none;
   display: flex;
   justify-content: center;
   //font-family: $fontOswald;
-  background-color: $blackColor;
+  //background-color: $blackColor;
+  background-color: rgba(0, 0, 0, 0.95);
   //margin:0.5em auto ;
   padding:0.5em 0 ;
   //height: 5vh;
@@ -24,7 +27,7 @@
   }
 
   .navigation-bar-item-logo{
-
+    margin-top: 5px;
     //color: rgba(255, 0, 0, 0.55);
     //color: $greyFontColor;
     //color: #fff;
@@ -60,7 +63,8 @@
     font-size: 1.5em;
     //margin: 0 0.1em;
     //padding:0 0.1em  ;
-    padding:0 1em  ;
+    padding: 0.3em 1em;
+    //padding:0 1em  ;
     margin: auto 0;
 
     //background-color: $blackColor;
@@ -112,7 +116,7 @@
 .btn-search-circle{
   z-index: 9999;
   width: 50px;
-  height: 50px;
+  height: 40px;
   border-style: none;
   font-size: 20px;
   font-weight: bold;
@@ -120,20 +124,46 @@
   cursor: pointer;
   border-radius: 50%;
   position: absolute;
-  left: -20px;
-  top: -3px;
+  left: 0;
+  top: 0;
   color: #fff;
-  background-color:transparent;
+  background-color: transparent;
   pointer-events: painted;
+
+  .gg-search_icon-circle {
+    &:hover {
+      color: #fff;
+
+    }
+  }
+
+  //z-index: 9999;
+  //width: 50px;
+  //height: 50px;
+  //border-style: none;
+  //font-size: 20px;
+  //font-weight: bold;
+  //outline: none;
+  //cursor: pointer;
+  //border-radius: 50%;
+  //position: absolute;
+  //left: -20px;
+  //top: -3px;
+  //color: #fff;
+  //background-color:transparent;
+  //pointer-events: painted;
 }
 .gg-search_icon-circle{
-  margin-left: 23px;
-  margin-top: -18px;
-  color:$fontColor;
-  &:hover{
-    color: #fff;
-
-  }
+  margin-left: 13px;
+  margin-top: -5px;
+  color: #ccc;
+  //margin-left: 23px;
+  //margin-top: -18px;
+  //color:$fontColor;
+  //&:hover{
+  //  color: #fff;
+  //
+  //}
 }
 
 

@@ -18,10 +18,6 @@ const Home = () => {
 
     }, [page])
 
-
-
-
-
     return (
         <>
             <div className="my-container">

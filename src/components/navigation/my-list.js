@@ -18,9 +18,10 @@ const MyList = () => {
     return (
         <>
 
-            <h2 className="trending-title">My List:</h2>
+            {/*<h2 className="trending-title">My List:</h2>*/}
 
             <div className="my-container">
+                <h2 className="trending-title">My List:</h2>
                 {/*<Link to="/my-list/add">*/}
                 {/*    /!*<button> ADD MOVIE</button>*!/*/}
                 {/*    <Button variant="contained">ADD MOVIE</Button>*/}

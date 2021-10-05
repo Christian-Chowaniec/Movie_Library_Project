@@ -1,6 +1,8 @@
 import React, {useEffect} from 'react';
 import axios from "axios";
 import {Chip} from "@material-ui/core";
+import {createTheme as createMuiTheme  ,ThemeProvider} from "@material-ui/core/styles";
+
 
 const Genres = ({type, selectedGenres, setSelectedGenres, genres, setGenres, setPage}) => {
 
@@ -24,6 +26,14 @@ const Genres = ({type, selectedGenres, setSelectedGenres, genres, setGenres, set
         );
         setGenres(data.genres);
     };
+    const darkRedTheme = createMuiTheme({
+        palette: {
+            type: "dark",
+            primary: {
+                main: "rgba(255, 0, 0, 0.55)",
+            },
+        },
+    });
 
     useEffect(() => {
         fetchGenres();
@@ -33,10 +43,11 @@ const Genres = ({type, selectedGenres, setSelectedGenres, genres, setGenres, set
     }, []);
 
     return (
+        <ThemeProvider theme={darkRedTheme}>
         <div style={{padding: "6px 0"}}>
             {selectedGenres.map((genre) => (
                 <Chip
-                    style={{margin: 2}}
+                    style={{margin: 2,}}
                     label={genre.name}
                     key={genre.id}
                     color="primary"
@@ -56,6 +67,7 @@ const Genres = ({type, selectedGenres, setSelectedGenres, genres, setGenres, set
                 />
             ))}
         </div>
+        </ThemeProvider>
     );
 };
 
