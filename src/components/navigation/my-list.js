@@ -26,7 +26,7 @@ const MyList = () => {
                 {/*    /!*<button> ADD MOVIE</button>*!/*/}
                 {/*    <Button variant="contained">ADD MOVIE</Button>*/}
                 {/*</Link>*/}
-            </div>
+
 
             <div className="single-card-container">
                 {
@@ -45,6 +45,7 @@ const MyList = () => {
 
                 }
 
+            </div>
             </div>
 
         </>

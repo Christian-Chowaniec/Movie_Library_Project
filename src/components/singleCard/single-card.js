@@ -1,6 +1,8 @@
 import React from 'react';
+import ComponentModal from "../modal-card/modal-card";
 const image_api = "https://image.tmdb.org/t/p/w500";
 const image_unavailable = "https://www.peakndt.com/wp-content/uploads/2017/02/No_picture_available.png";
+// import TransitionsModal from "../modal-card/modal-card";
 
 
 const SingleCard = ({id, poster, title, date, media_type, vote_average, overview, onMyList, setUsers}) => {
@@ -32,19 +34,24 @@ const SingleCard = ({id, poster, title, date, media_type, vote_average, overview
 
     return (
         <>
-            <div className="single-card-box">
+            {/*className="single-card-box"*/}
+            <ComponentModal media_type={media_type} id={id}>
 
                 <img className="" src={poster ? `${image_api}${poster}` : image_unavailable} alt={title}/>
 
 
-                {!onMyList && <div onClick={addToMyList} className="buttons-add-delete">
+                {!onMyList &&
+                <div onClick={addToMyList} className="buttons-add-delete">
                     <i className="gg-add"></i>
-                </div>}
+                </div>
+                }
 
 
-                {onMyList && <div onClick={deleteFromMyList} className="buttons-add-delete">
+                {onMyList &&
+                <div onClick={deleteFromMyList} className="buttons-add-delete">
                     <i className="gg-close-o"></i>
-                </div>}
+                </div>
+                }
 
 
                 {/*<img className="" src={poster ? `${image_api}${poster}` : image_unavailable} alt={title}/>*/}
@@ -54,13 +61,13 @@ const SingleCard = ({id, poster, title, date, media_type, vote_average, overview
 
                     <div className="single-card-info">
                         <h2 className="single-card-info-type">{media_type === "tv" ? "TV Series" : "Movie"}</h2>
-                        <span className="single-card-info-date"> {date}</span>
+                        {/*<span className="single-card-info-date"> {date}</span>*/}
                         <span className="single-card-info-vote"> {vote_average}</span>
                         {/*<span className="single-card-info-vote"> {overview}</span>*/}
                     </div>
                 </div>
 
-            </div>
+            </ComponentModal>
         </>
     );
 };
