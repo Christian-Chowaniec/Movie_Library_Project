@@ -1,3 +1,20 @@
 {
-  "favorites": []
+  "favorites": [
+    {
+      "id": 547565,
+      "poster": "/rqs2CXpc4d5FzeP1EZCYItAVo81.jpg",
+      "title": "The Night House",
+      "date": "2021-07-15",
+      "media_type": "movie",
+      "vote_average": 6.6
+    },
+    {
+      "id": 93405,
+      "poster": "/dDlEmu3EZ0Pgg93K2SVNLCjCSvE.jpg",
+      "title": "Squid Game",
+      "date": "2021-09-17",
+      "media_type": "tv",
+      "vote_average": 7.9
+    }
+  ]
 }

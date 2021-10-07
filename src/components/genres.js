@@ -44,10 +44,10 @@ const Genres = ({type, selectedGenres, setSelectedGenres, genres, setGenres, set
 
     return (
         <ThemeProvider theme={darkRedTheme}>
-        <div style={{padding: "6px 0"}}>
+        <div style={{padding: "6px 14px"}}>
             {selectedGenres.map((genre) => (
                 <Chip
-                    style={{margin: 2,}}
+                    style={{margin: 2}}
                     label={genre.name}
                     key={genre.id}
                     color="primary"
@@ -58,7 +58,7 @@ const Genres = ({type, selectedGenres, setSelectedGenres, genres, setGenres, set
             ))}
             {genres.map((genre) => (
                 <Chip
-                    style={{margin: 2}}
+                    style={{margin: 2 , padding:2}}
                     label={genre.name}
                     key={genre.id}
                     clickable

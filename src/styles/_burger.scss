@@ -19,7 +19,7 @@
   font-size: 1.2rem;
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 100;
   border-bottom: 3px solid $accentColor;
 }
 
@@ -52,6 +52,7 @@
   //outline: none;
   @include tablet {
     flex-grow: 0;
+    margin-left: 0;
   }
 
   li {

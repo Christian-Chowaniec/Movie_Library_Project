@@ -1,3 +1,77 @@
+.button-add-del{
+  color: $greyFontColor;
+  padding: 10px;
+  border-radius: 10px;
+  width: fit-content;
+  margin: 0 auto;
+  //transform: scale(1.5);
+  //transition: transform 0.2s ease-in-out;
+  position: absolute;
+  z-index:99;
+
+
+
+  cursor: pointer;
+  //transition: transform 0.4s ease-in-out;
+  //padding: 10px 0;
+  //top: -3px;
+  //display: flex;
+  //align-content: center;
+  //justify-content: center;
+  background-color: $blackLessTransparent;
+  //position: absolute;
+  box-shadow: 0 0 1em black;
+  //bottom: 92%;
+  overflow: visible;
+  //left: 0;
+  //right: 0;
+
+  .gg-add {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .gg-close-o {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &:hover {
+    color:$whiteFontColor ;
+    transition: transform 0.2s ease-in-out;
+    .gg-add {
+      transform: scale(1.4);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .gg-close-o {
+      transform: scale(1.4);
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+  transition: transform 0.6s ease-in-out;
+  &:active{
+    //color: $accentColor2;
+    color: $whiteFontColor2;
+    transition: transform 0.6s ease-in-out;
+    .gg-add{
+      background-color: rgba(12, 122, 0, 0.6);
+
+    }
+    .gg-close-o{
+      background-color: $accentColor3;
+
+    }
+
+
+  }
+  &:focus{
+    transition: transform 0.6s ease-in-out;
+    //color: $accentColor2;
+    color: $whiteFontColor2;
+  }
+}
+
 .single-card-container {
   font-family: $JosefinSans;
   display: flex;
@@ -5,7 +79,48 @@
   justify-content: center;
 }
 
+.button-add{
 
+}
+
+.buttons-add-delete {
+  cursor: pointer;
+  transition: transform 0.4s ease-in-out;
+  padding: 10px 0;
+  top: -3px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: $blackTransparent;
+  position: absolute;
+  box-shadow: 0 0 1em black;
+  bottom: 92%;
+  overflow: visible;
+  left: 0;
+  right: 0;
+  .gg-add {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .gg-close-o {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &:hover {
+    transition: transform 0.2s ease-in-out;
+    .gg-add {
+      transform: scale(1.1);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .gg-close-o {
+      transform: scale(1.1);
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+}
 
 .single-card-box {
   width: 250px;
@@ -15,6 +130,7 @@
   border-radius: 10px;
   position: relative;
   overflow: hidden;
+  transition: transform 0.2s ease-in-out;
   margin: 10px;
   @include desktop {
 
@@ -37,6 +153,7 @@
   img {
     width: 100%;
     border-radius: 10px 10px 0 0;
+    transition: transform 0.2s ease-in-out;
   }
 
   .single-card-title {
@@ -60,7 +177,7 @@
   }
 
   .buttons-add-delete {
-    display: none;
+    //display: none;
   }
 
   .buttons-add-delete {
@@ -71,41 +188,43 @@
     width: 100%;
 
   }
-  .buttons-add-delete {
-    //width: 50%;
-    width: 100%;
-    cursor: pointer;
-    padding: 10px 0;
-    top: -3px;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    background-color: $blackTransparent;
-    position: absolute;
-    box-shadow: 0 0 1em black;
-    bottom: 92%;
-    overflow: visible;
-    left: 0;
-    right: 0;
-    //border-right: 1px solid $accentColor;
-    //border-right: 1px solid $fontColor;
-    //border-right: 2px solid #353434;
+  //.buttons-add-delete {
+  //  //width: 50%;
+  //  width: 100%;
+  //  cursor: pointer;
+  //  padding: 10px 0;
+  //  top: -3px;
+  //  display: flex;
+  //  align-content: center;
+  //  justify-content: center;
+  //  background-color: $blackTransparent;
+  //  position: absolute;
+  //  box-shadow: 0 0 1em black;
+  //  bottom: 92%;
+  //  overflow: visible;
+  //  left: 0;
+  //  right: 0;
+  //  //border-right: 1px solid $accentColor;
+  //  //border-right: 1px solid $fontColor;
+  //  //border-right: 2px solid #353434;
+  //
+  //  &:hover {
+  //
+  //    .gg-add {
+  //      transform: scale(1.1);
+  //      transition: transform 0.2s ease-in-out;
+  //    }
+  //
+  //    .gg-close-o {
+  //      transform: scale(1.1);
+  //      transition: transform 0.2s ease-in-out;
+  //    }
+  //  }
+  //}
 
-    &:hover {
-
-      .gg-add {
-        transform: scale(1.1);
-        transition: transform 0.2s ease-in-out;
-      }
-
-      .gg-close-o {
-        transform: scale(1.1);
-        transition: transform 0.2s ease-in-out;
-      }
-    }
-  }
   .button-more-info{
     width: 50%;
+    //transition: transform 0.2s ease-in-out;
     cursor: pointer;
     padding: 10px 0;
     top: -3px;
@@ -119,6 +238,7 @@
     bottom: 92%;
     overflow: visible;
     right: 0;
+    transition: 0.2s ease-in-out;
     //border-left: 1px solid $accentColor;
     //border-left: 1px solid $fontColor;
     &:hover{
@@ -133,13 +253,13 @@
   }
 
   &:hover {
-
+    //transition: transform 0.2s ease-in-out;
     .single-card-info {
       border-top: 3px solid $fontColor;
     }
 
     transform: scale(1.03);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.4s ease-in-out;
 
     img {
       transform: scale(1.03);
@@ -149,6 +269,7 @@
 
     //.buttons-add-delete {
     //  cursor: pointer;
+    //  transition: transform 0.4s ease-in-out;
     //  padding: 10px 0;
     //  top: -3px;
     //  display: flex;
@@ -163,7 +284,7 @@
     //  right: 0;
     //
     //  &:hover {
-    //
+    //    transition: transform 0.2s ease-in-out;
     //    .gg-add {
     //      transform: scale(1.1);
     //      transition: transform 0.2s ease-in-out;

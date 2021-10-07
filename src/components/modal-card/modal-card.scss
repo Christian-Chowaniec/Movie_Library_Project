@@ -1,5 +1,6 @@
 .modal-box-close-btn {
   z-index: 99;
+  border: 2px solid #242424;
   background-color: rgba(0, 0, 0, 0.95);
   position: relative;
   height: 3em;
@@ -33,28 +34,39 @@
 
   }
 
-  border: none;
-
+  //border: none;
+  transition: transform 0.3s ease-in-out;
   &:hover {
     //background-color: $greyFontColor;
     background-color: rgba(0, 0, 0, 0.95);
     box-shadow: 0 0 1em $accentColor2;
+    transition: transform 0.5s ease-in-out;
 
     .gg-close {
-      color: rgba(0, 0, 0, 0.95);
+      //color: rgba(0, 0, 0, 0.95);
       transform: scale(1.3);
       color: $accentColor2;
+      transition: transform 0.2s ease-in-out;
     }
 
   }
 
   .gg-close {
+    transition: transform 0.3s ease-in-out;
     position: relative;
     //color: rgba(50, 50, 50, 0.95);
-    color: $greyFontColor;
-    top: -4px;
-    right: 3px;
+    //color: $greyFontColor;
+    color: rgb(93, 91, 91);
+    //top: -4px;
+    //right: 3px;
+    top: -5px;
+    right: 5px;
     transform: scale(1.2);
+    &:active{
+      //color: $accentColor2;
+      color: $whiteFontColor2;
+      transition: transform 0.6s ease-in-out;
+    }
   }
 
 }

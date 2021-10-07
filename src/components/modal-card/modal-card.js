@@ -102,6 +102,7 @@ export default function TransitionsModal({children, media_type, id,}) {
 
                             <button className="modal-box-close-btn" onClick={handleClose}>
                                 <i className="gg-close"></i>
+                                {/*<i className="fas fa-times"></i>*/}
                             </button>
 
 
