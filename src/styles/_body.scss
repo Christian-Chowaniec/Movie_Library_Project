@@ -38,23 +38,23 @@ body {
   font-family: $fontOswald;
 
   @include desktop {
-    background-color: rgba(4, 62, 0, 0.8);
+    //background-color: rgba(4, 62, 0, 0.8);
 
   }
 
   @include tablet {
     //background-color: green;
-    background-color: rgba(41, 41, 0, 0.8);
+    //background-color: rgba(41, 41, 0, 0.8);
   }
   @include smallerTablet {
     //background-color: green;
-    background-color: rgba(48, 0, 44, 0.8);
+    //background-color: rgba(48, 0, 44, 0.8);
   }
   @include phone {
-    background-color: rgba(0, 0, 52, 0.8);
+    //background-color: rgba(0, 0, 52, 0.8);
   }
 
   @include smallerPhone {
-    background-color: rgba(60, 0, 0, 0.8);
+    //background-color: rgba(60, 0, 0, 0.8);
   }
 }
