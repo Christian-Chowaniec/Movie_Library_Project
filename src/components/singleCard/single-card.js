@@ -24,7 +24,7 @@ const SingleCard = ({id, poster, title, date, media_type, vote_average, overview
         }
 
         const deleteFromMyList = () => {
-            fetch(`http://localhost:3000/favorites/${id}`,{
+            fetch(`http://localhost:3000/favorites/${id}`, {
                 method: "DELETE",
 
             }).then(r => r.json()).then(d => {
@@ -41,16 +41,16 @@ const SingleCard = ({id, poster, title, date, media_type, vote_average, overview
                     {!onMyList &&
                     <div onClick={addToMyList} className="button-add-del"><i className="gg-add"></i></div>}
 
-                    <ComponentModal media_type={media_type} id={id}>
-                        <img className="" src={poster ? `${image_api}${poster}` : image_unavailable} alt={title}/>
-                        <div className="single-card-title-bottom">
-                            <h3 className="single-card-title">{title}</h3>
-                            <div className="single-card-info">
-                                <h2 className="single-card-info-type">{media_type === "tv" ? "TV Series" : "Movie"}</h2>
-                                <span className="single-card-info-vote"> {vote_average}</span>
+                        <ComponentModal media_type={media_type} id={id}>
+                            <img className="" src={poster ? `${image_api}${poster}` : image_unavailable} alt={title}/>
+                            <div className="single-card-title-bottom">
+                                <h3 className="single-card-title">{title}</h3>
+                                <div className="single-card-info">
+                                    <h2 className="single-card-info-type">{media_type === "tv" ? "TV Series" : "Movie"}</h2>
+                                    <span className="single-card-info-vote"> {vote_average}</span>
+                                </div>
                             </div>
-                        </div>
-                    </ComponentModal>
+                        </ComponentModal>
                 </div>
             </>
         );
