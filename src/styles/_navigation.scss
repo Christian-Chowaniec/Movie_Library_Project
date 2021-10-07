@@ -4,12 +4,9 @@
   a {
     color: #980c0c;
   }
-
-
 }
 
 .navbar {
-  //background-color: #1f5156;
   font-family: $JosefinSans;
   background-color: $blackLessTransparent;
   height: 80px;
@@ -38,7 +35,6 @@
 }
 
 .nav-logo {
-  //color: #f5b921;
   color: #980c0c;
   outline-style: none;
   align-items: center;
@@ -49,7 +45,6 @@
   flex-grow: 1;
   list-style-type: none;
   font-weight: 700;
-  //outline: none;
   @include tablet {
     flex-grow: 0;
     margin-left: 0;
@@ -72,7 +67,6 @@
     }
 
     &:hover {
-      //color: #980c0c;
       color: rgba(255, 0, 0, 0.93);
       outline: none;
     }
@@ -84,8 +78,6 @@
   list-style: none;
   text-align: center;
   margin-right: 2rem;
-  //margin-top: 3.5em;
-
 }
 
 .nav-links {
@@ -124,26 +116,18 @@
   width: 0;
   background: transparent;
   transition: width 0.7s ease, background-color 0.5s ease;
-  //margin-top: 3em;
-
 }
 
 .nav-item:hover:after {
   outline: none;
   width: 100%;
-  //background: #ffdd40;
   background: $accentColor3;
-  //margin-top: 3em;
 }
 
 .nav-item .active {
   font-weight: 700;
   outline: none;
-  //color: #ffdd40;
   color: $accentColor3;
-  //border: 1px solid #ffdd40;
-  //border: 1px solid $greyFontColor;
-
 }
 
 .nav-icon {
@@ -151,7 +135,6 @@
   display: none;
 }
 
-//@media screen and (max-width: 960px) {
 @include tablet {
   .nav-menu {
     display: flex;
@@ -167,7 +150,6 @@
 
   .nav-menu.active {
     outline: none;
-    //background: #1f5156;
     background: $blackLessTransparent;
     left: 0px;
     opacity: 1;
@@ -175,7 +157,6 @@
     z-index: 1;
   }
   .nav-item .active {
-    //color: #ffdd40;
     color: $accentColor;
     outline: none;
     border: none;
@@ -210,6 +191,5 @@
       top: 5px;
       right: 10px;
     }
-
   }
 }

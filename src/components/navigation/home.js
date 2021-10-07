@@ -13,8 +13,9 @@ const Home = () => {
         setContent(data.results);
     }
     useEffect(() => {
-        fetchTrending();
 
+        fetchTrending();
+// eslint-disable-next-line
     }, [page])
 
     return (
@@ -36,12 +37,7 @@ const Home = () => {
                                 vote_average={c.vote_average}
                             />)
                         }
-                        {/*<button onClick={addToMyList}>add</button>*/}
                     </div>
-                    {/*<h2 className="trending-title">Popular:</h2>*/}
-                    {/*<div className="single-card-container" >*/}
-                    {/*    <Popular/>*/}
-                    {/*</div>*/}
                     <div className="pagination-container">
                         <CustomPagination setPage={setPage}/>
                     </div>

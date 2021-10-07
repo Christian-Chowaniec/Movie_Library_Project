@@ -60,6 +60,7 @@ export default function TransitionsModal({children, media_type, id,}) {
     useEffect(() => {
         fetchData();
         fetchVideo();
+        // eslint-disable-next-line
     }, []);
     const darkRedTheme = createMuiTheme({
         palette: {

@@ -1,7 +1,5 @@
 import React from 'react';
 import ComponentModal from "../modal-card/modal-card";
-// import TransitionsModal from "../modal-card/modal-card";
-// import handleOpen from "../modal-card/modal-card";
 
 const image_api = "https://image.tmdb.org/t/p/w500";
 const image_unavailable = "https://www.peakndt.com/wp-content/uploads/2017/02/No_picture_available.png";
@@ -26,7 +24,7 @@ const SingleCard = ({id, poster, title, date, media_type, vote_average, overview
         }
 
         const deleteFromMyList = () => {
-            fetch(`http://localhost:3000/favorites/${id}`, {
+            fetch(`http://localhost:3000/favorites/${id}`,{
                 method: "DELETE",
 
             }).then(r => r.json()).then(d => {
@@ -36,122 +34,27 @@ const SingleCard = ({id, poster, title, date, media_type, vote_average, overview
 
         return (
             <>
-              <div>
-                  {onMyList &&
-                  <div onClick={deleteFromMyList} className="button-add-del">
-                      <i className="gg-close-o"></i>
-                      {/*<i className="fas fa-times"></i>*/}
-                  </div>}
+                <div>
+                    {onMyList &&
+                    <div onClick={deleteFromMyList} className="button-add-del"><i className="gg-close-o"></i></div>}
 
-                  {!onMyList && <div onClick={addToMyList} className="button-add-del">
-                      <i className="gg-add"></i>
+                    {!onMyList &&
+                    <div onClick={addToMyList} className="button-add-del"><i className="gg-add"></i></div>}
 
-
-                  </div>}
-
-                  <ComponentModal media_type={media_type} id={id}>
-                      <img className="" src={poster ? `${image_api}${poster}` : image_unavailable} alt={title}/>
-                      <div className="single-card-title-bottom">
-                          <h3 className="single-card-title">{title}</h3>
-                          <div className="single-card-info">
-                              <h2 className="single-card-info-type">{media_type === "tv" ? "TV Series" : "Movie"}</h2>
-                              <span className="single-card-info-vote"> {vote_average}</span>
-                          </div>
-
-                      </div>
-                  </ComponentModal>
-              </div>
+                    <ComponentModal media_type={media_type} id={id}>
+                        <img className="" src={poster ? `${image_api}${poster}` : image_unavailable} alt={title}/>
+                        <div className="single-card-title-bottom">
+                            <h3 className="single-card-title">{title}</h3>
+                            <div className="single-card-info">
+                                <h2 className="single-card-info-type">{media_type === "tv" ? "TV Series" : "Movie"}</h2>
+                                <span className="single-card-info-vote"> {vote_average}</span>
+                            </div>
+                        </div>
+                    </ComponentModal>
+                </div>
             </>
         );
     }
 ;
 
 export default SingleCard;
-
-{/*{!onMyList &&*/
-}
-{/*<div onClick={addToMyList} className="buttons-add-delete">*/
-}
-{/*    <i className="gg-add"></i>*/
-}
-{/*</div>}*/
-}
-{/*{onMyList &&*/
-}
-{/*<div onClick={deleteFromMyList} className="buttons-add-delete">*/
-}
-{/*    <i className="gg-close-o"></i>*/
-}
-{/*</div>}*/
-}
-
-
-{/*className="single-card-box"*/
-}
-
-{/*<span className="single-card-info-date"> {date}</span>*/
-}
-{/*<span className="single-card-info-vote"> {overview}</span>*/
-}
-
-
-{/*// <div className="main-buttons-add-delete">*/
-}
-{/**/
-}
-
-{/*{!onMyList &&*/
-}
-{/*   <div onClick={addToMyList} className="buttons-add-delete">*/
-}
-{/*       <i className="gg-add"></i>*/
-}
-{/*   </div>}*/
-}
-{/*{onMyList &&*/
-}
-{/*<div onClick={deleteFromMyList} className="buttons-add-delete">*/
-}
-{/*    <i className="gg-close-o"></i>*/
-}
-{/*</div>*/
-}
-{/*}*/
-}
-
-
-{/*onClick={handleOpen}*/
-}
-{/*<div  className="button-more-info">*/
-}
-{/*    <i className="gg-more-o"></i>*/
-}
-{/*</div>*/
-}
-{/*// </div>*/
-}
-
-
-{/*{onMyList &&*/
-}
-{/*<div onClick={deleteFromMyList} className="buttons-add-delete">*/
-}
-{/*    <i className="gg-close-o"></i>*/
-}
-{/*</div>*/
-}
-{/*}*/
-}
-
-
-{/*{!onMyList &&*/
-}
-{/*<div onClick={addToMyList} className="buttons-add-delete">*/
-}
-{/*    <i className="gg-add"></i>*/
-}
-{/*</div>*/
-}
-{/*}*/
-}
-

@@ -15,6 +15,62 @@
       "date": "2021-09-17",
       "media_type": "tv",
       "vote_average": 7.9
+    },
+    {
+      "id": 512025,
+      "poster": "/qWvFtI8ivAqj0NXa8E8N0pK0LNr.jpg",
+      "title": "There's Someone Inside Your House",
+      "date": "2021-09-24",
+      "media_type": "movie",
+      "vote_average": 6.1
+    },
+    {
+      "id": 580489,
+      "poster": "/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg",
+      "title": "Venom: Let There Be Carnage",
+      "date": "2021-09-30",
+      "media_type": "movie",
+      "vote_average": 7.5
+    },
+    {
+      "id": 550988,
+      "poster": "/xmbU4JTUm8rsdtn7Y3Fcm30GpeT.jpg",
+      "title": "Free Guy",
+      "date": "2021-08-11",
+      "media_type": "movie",
+      "vote_average": 7.9
+    },
+    {
+      "id": 91363,
+      "poster": "/lztz5XBMG1x6Y5ubz7CxfPFsAcW.jpg",
+      "title": "What If...?",
+      "date": "2021-08-11",
+      "media_type": "tv",
+      "vote_average": 8.5
+    },
+    {
+      "id": 370172,
+      "poster": "/eqWaeh21e4ZgHjwpULZVHCGIq9X.jpg",
+      "title": "No Time to Die",
+      "date": "2021-09-29",
+      "media_type": "movie",
+      "vote_average": 7.4
+    },
+    {
+      "id": 639721,
+      "poster": "/xYLBgw7dHyEqmcrSk2Sq3asuSq5.jpg",
+      "title": "The Addams Family 2",
+      "date": "2021-10-01",
+      "media_type": "movie",
+      "vote_average": 8
+    },
+    {
+      "id": 568620,
+      "poster": "/uIXF0sQGXOxQhbaEaKOi2VYlIL0.jpg",
+      "title": "Snake Eyes: G.I. Joe Origins",
+      "date": "2021-07-22",
+      "media_type": "movie",
+      "vote_average": 6.9
     }
   ]
 }

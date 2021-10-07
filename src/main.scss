@@ -1,13 +1,11 @@
 @import "settings/reset";
 @import "settings/all";
-
-@import "styles/nav";
+@import "styles/input-search";
 @import "styles/body";
 @import "styles/home";
-@import "styles/movieCard";
-@import "styles/burger";
+@import "components/movie-card/movie-card";
+@import "styles/navigation";
 @import "components/singleCard/single-card";
-@import "components/add-object/add-object";
 @import "components/modal-card/modal-card";
 
 

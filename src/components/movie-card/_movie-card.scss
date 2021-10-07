@@ -16,7 +16,6 @@
     .movieCard-description {
       transform: translateY(0%);
     }
-
   }
 
   .movieCard-description {
@@ -31,16 +30,11 @@
     bottom: 0;
     left: 0;
     right: 0;
-
-
     transform: translateY(100%);
     transition: transform 0.3s ease-in-out;
     overflow: auto;
     max-height: 100%;
-    //&:hover{
-    //  transform: translateY(0%);
-    //
-    //}
+
     h2 {
       font-size: 1.2em;
     }
@@ -49,45 +43,19 @@
 
   .gg-more-alt_icon {
     z-index: 100;
-    ////position: static;
     position: relative;
-    //top: 18px;
-    //left: 146px;
-    //background-color: rgba(40, 39, 39, 0.49);
-    //border-radius:50px;
-    //width: 20px;
-    //height: 20px;
-    //filter: blur(8px);
-    //-webkit-filter: blur(2px);
-    //border: 2px solid $brighterBlackColor;
-    //display: flex;
-    i {
-      //top: 8px;
-      //left: 204px;
-      //filter:blur(0);
-      //-webkit-filter:blur(0);
-
-    }
-
   }
 
   .box-img {
-    //height:305px;
     img {
-      //display:flex;
-      //justify-content: center;
       max-width: 100%;
-      //transform: scale(1.05);
-      //border-radius: 10px;
       border-radius: 10px 10px 0 0;
       box-shadow: 0 0 1em black;
       border-bottom: 4px solid $accentColor;
 
       &:hover {
         .movieCard {
-
         }
-
       }
     }
 
@@ -97,30 +65,6 @@
 
     &:hover {
       box-shadow: 0px -1px 100px -46px rgba(255, 255, 255, 0.81);
-      //.img-grey-bar {
-      //  display: flex;
-      //  position: relative;
-      //  left: 0;
-      //  top: -27px;
-      //  height: 35px;
-      //  width: 200px;
-      //  z-index: 100;
-      //  background-color: rgba(0, 0, 0, 0.8);
-      //  border-radius: 0 0 10px 10px;
-      //  span{
-      //    margin-left: 1em;
-      //  }
-      //}
-    }
-
-    .box-img-description {
-      //border-radius: 10px;
-      //position: relative;
-      //top: -303px;
-      //z-index: 150;
-      //height: 305px;
-      //background-color: red;
-
     }
   }
 
@@ -134,26 +78,21 @@
     justify-content: center;
     align-items: center;
     color: $whiteFontColor;
-    //margin-right: 10em;
-
   }
 
   .movie-info-date {
     color: $whiteFontColor;
-
   }
 
   .movie-info {
-    //background-color: $blackColor;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     color: $fontColor;
-    //display: flex;
+
     .movie-info-title {
       color: #fff;
-      //margin: 1em 0 0.7em 0;
       padding: 1em;
       display: flex;
       justify-content: center;
@@ -169,10 +108,7 @@
 
       .movie-info-date {
         margin-left: 1em;
-
       }
     }
-
-
   }
 }

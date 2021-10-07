@@ -21,6 +21,7 @@ const Popular = () => {
     }
     useEffect(() => {
         fetchMovies();
+        // eslint-disable-next-line
     }, [page, genreforURL])
 
     return (
@@ -30,7 +31,6 @@ const Popular = () => {
                     <h2 className="trending-title">Popular:</h2>
                     <div className="d-flex justify-content-center">
                         <Genres
-
                             type="movie"
                             selectedGenres={selectedGenres}
                             setSelectedGenres={setSelectedGenres}
@@ -63,4 +63,5 @@ const Popular = () => {
         </>
     );
 };
+
 export default Popular;

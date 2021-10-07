@@ -5,7 +5,6 @@ import CustomPagination from "../pagination/CustomPagination";
 import Genres from "../genres";
 import useGenre from "../../hook/useGenre";
 
-
 const TvSerials = () => {
     const [content, setContent] = useState([]);
     const [page, setPage] = useState(1)
@@ -19,21 +18,17 @@ const TvSerials = () => {
         console.log(data)
         setContent(data.results);
         setNumOfPages(data.total_pages)
-
     }
     useEffect(() => {
         fetchMovies();
+        // eslint-disable-next-line
     }, [page, genreforURL])
 
-
     return (
-
         <>
             <div className="my-container">
                 <div>
-
                     <h2 className="trending-title">TV Series:</h2>
-
                     <div className="d-flex justify-content-center">
                         <Genres
                             type="tv"

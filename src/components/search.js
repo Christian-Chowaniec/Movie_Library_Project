@@ -39,6 +39,7 @@ const Search = () => {
 
     useEffect(() => {
         fetchSearch();
+        // eslint-disable-next-line
     }, [type, page]);
 
     return (
@@ -84,8 +85,6 @@ const Search = () => {
 
                         </ThemeProvider>
                         <div className="single-card-container">
-
-
                             {
                                 content && content.map((c) => (
                                     <SingleCard
@@ -98,11 +97,9 @@ const Search = () => {
                                         vote_average={c.vote_average}
                                     />
                                 ))}
-
                             {searchText &&
                             !content &&
                             (type ? <h2>No Series Found</h2> : <h2>No Movies Found</h2>)}
-
                         </div>
                         {numOfPages > 1 && (
                             <div className="pagination-container">
@@ -113,8 +110,7 @@ const Search = () => {
                 </div>
             </div>
         </>
-    )
-        ;
+    );
 };
 
 export default Search;
