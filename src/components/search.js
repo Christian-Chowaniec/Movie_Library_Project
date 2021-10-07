@@ -1,11 +1,6 @@
 import React, {useEffect, useState} from 'react';
-// import { createTheme as createMuiTheme} from "@material-ui/core";
 import axios from "axios";
-// import React, {useState} from 'react';
 import SearchIcon from '@mui/icons-material/Search';
-import {flexbox} from '@mui/system';
-// import useGenre from "../hook/useGenre";
-// import Genres from "./genres";
 import SingleCard from "./singleCard/single-card";
 import CustomPagination from "./pagination/CustomPagination";
 import {
@@ -35,27 +30,20 @@ const Search = () => {
         },
     });
 
-
-    // const [earch, search] = useState([]);
     const fetchSearch = async () => {
         const {data} = await axios.get(`https://api.themoviedb.org/3/search/${type ? "tv" : "movie"}?api_key=76578856efa3b3119d5ebe76dc5498b0&language=en-US&query=${searchText}&page=${page}&include_adult=false`);
         console.log(data)
         setContent(data.results);
         setNumOfPages(data.total_pages);
-        // console.log(data);
     }
-
 
     useEffect(() => {
         fetchSearch();
     }, [type, page]);
 
-
     return (
         <>
             <div>
-                {/*<h1>here can you search movies!</h1>*/}
-                {/*<input type="text"/>*/}
                 <div className="my-container">
                     <ThemeProvider theme={darkTheme}>
                         <div style={{display: 'flex', margin: "1em 0",}}>
@@ -77,13 +65,8 @@ const Search = () => {
                         </div>
                     </ThemeProvider>
 
-                    {/*<button> <SearchIcon/>*/}
-                    {/*</button>*/}
-
-
                     <div>
                         <ThemeProvider theme={darkTheme}>
-                            {/*<div style={{display: 'flex',width:"100%"}}>*/}
                             <Tabs
                                 value={type}
                                 indicatorColor="primary"
@@ -98,14 +81,13 @@ const Search = () => {
                                 <Tab style={{width: "50%"}} label="Movies"/>
                                 <Tab style={{width: "50%"}} label="TV Series"/>
                             </Tabs>
-                            {/*</div>*/}
-                            {/*<h2 className="trending-title">Movies:</h2>*/}
+
                         </ThemeProvider>
                         <div className="single-card-container">
 
 
                             {
-                                content && content.map((c) =>(
+                                content && content.map((c) => (
                                     <SingleCard
                                         key={c.id}
                                         id={c.id}
@@ -115,7 +97,7 @@ const Search = () => {
                                         media_type={type ? "tv" : "movie"}
                                         vote_average={c.vote_average}
                                     />
-                                    ))}
+                                ))}
 
                             {searchText &&
                             !content &&

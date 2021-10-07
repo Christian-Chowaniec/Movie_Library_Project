@@ -1,9 +1,10 @@
 import React from 'react';
 import ComponentModal from "../modal-card/modal-card";
+// import TransitionsModal from "../modal-card/modal-card";
+// import handleOpen from "../modal-card/modal-card";
+
 const image_api = "https://image.tmdb.org/t/p/w500";
 const image_unavailable = "https://www.peakndt.com/wp-content/uploads/2017/02/No_picture_available.png";
-// import TransitionsModal from "../modal-card/modal-card";
-
 
 const SingleCard = ({id, poster, title, date, media_type, vote_average, overview, onMyList, setUsers}) => {
     const addToMyList = () => {
@@ -19,10 +20,11 @@ const SingleCard = ({id, poster, title, date, media_type, vote_average, overview
                 date,
                 media_type,
                 vote_average,
-                overview
+                overview,
             })
         })
     }
+
     const deleteFromMyList = () => {
         fetch(`http://localhost:3000/favorites/${id}`, {
             method: "DELETE",
@@ -39,12 +41,17 @@ const SingleCard = ({id, poster, title, date, media_type, vote_average, overview
 
                 <img className="" src={poster ? `${image_api}${poster}` : image_unavailable} alt={title}/>
 
-
                 {!onMyList &&
-                <div onClick={addToMyList} className="buttons-add-delete">
-                    <i className="gg-add"></i>
-                </div>
-                }
+               // <div className="main-buttons-add-delete">
+                   <div onClick={addToMyList} className="buttons-add-delete">
+                       <i className="gg-add"></i>
+                   </div>}
+
+                   {/*onClick={handleOpen}*/}
+                   {/*<div  className="button-more-info">*/}
+                   {/*    <i className="gg-more-o"></i>*/}
+                   {/*</div>*/}
+               {/*// </div>*/}
 
 
                 {onMyList &&
@@ -54,9 +61,20 @@ const SingleCard = ({id, poster, title, date, media_type, vote_average, overview
                 }
 
 
-                {/*<img className="" src={poster ? `${image_api}${poster}` : image_unavailable} alt={title}/>*/}
+
+
+
+
+                {/*{!onMyList &&*/}
+                {/*<div onClick={addToMyList} className="buttons-add-delete">*/}
+                {/*    <i className="gg-add"></i>*/}
+                {/*</div>*/}
+                {/*}*/}
+
+
 
                 <div className="single-card-title-bottom">
+
                     <h3 className="single-card-title">{title}</h3>
 
                     <div className="single-card-info">
@@ -65,16 +83,11 @@ const SingleCard = ({id, poster, title, date, media_type, vote_average, overview
                         <span className="single-card-info-vote"> {vote_average}</span>
                         {/*<span className="single-card-info-vote"> {overview}</span>*/}
                     </div>
-                </div>
 
+                </div>
             </ComponentModal>
         </>
     );
 };
 
 export default SingleCard;
-
-{/*{!onMyList && <button onClick={addToMyList}>add</button>}*/}
-{/*<i className="fas fa-plus-circle"></i>*/}
-{/*{onMyList && <i onClick={deleteFromMyList} className="gg-close-o"></i>}*/}
-{/*{onMyList && <button onClick={deleteFromMyList}>remove</button>}*/}

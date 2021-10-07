@@ -5,20 +5,9 @@ import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import axios from "axios";
 import YouTubeIcon from '@mui/icons-material/YouTube';
-// import GradeIcon from '@mui/icons-material/Grade';
-import { purple } from '@mui/material/colors';
-// import SingleCard from "../singleCard/single-card";
-
-// import {
-//     img_500,
-//     unavailable,
-//     unavailableLandscape,
-// } from "../../config/config";
-// import "./ContentModal.css";
 import {Button} from "@material-ui/core";
 import {ThemeProvider} from "@emotion/react";
-// import YouTubeIcon from "@material-ui/icons/YouTube";
-// import Carousel from "../Carousel/Carousel";
+
 const image_api = "https://image.tmdb.org/t/p/w500";
 const image_unavailable = "https://www.peakndt.com/wp-content/uploads/2017/02/No_picture_available.png";
 const useStyles = makeStyles((theme) => ({
@@ -28,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "center",
     },
     paper: {
-        width: "80%",
+        width: "85%",
         height: "80%",
         // backgroundColor: "#39445a",
         backgroundColor: "#141414",
@@ -43,7 +32,8 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function TransitionsModal({children, media_type, id}) {
+
+export default function TransitionsModal({children, media_type, id,}) {
     const classes = useStyles();
     const [open, setOpen] = useState(false);
     const [content, setContent] = useState();
@@ -61,7 +51,6 @@ export default function TransitionsModal({children, media_type, id}) {
         );
         setContent(data);
     };
-
     const fetchVideo = async () => {
         const {data} = await axios.get(
             `https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=76578856efa3b3119d5ebe76dc5498b0&language=en-US`
@@ -71,9 +60,7 @@ export default function TransitionsModal({children, media_type, id}) {
     useEffect(() => {
         fetchData();
         fetchVideo();
-        // eslint-disable-next-line
     }, []);
-
     const darkRedTheme = createMuiTheme({
         palette: {
             type: "dark",
@@ -86,20 +73,20 @@ export default function TransitionsModal({children, media_type, id}) {
     return (
         <>
             <div
-                className="single-card-box"
+                className="single-card-box "
                 style={{cursor: "pointer"}}
+
                 // color="inherit"
                 onClick={handleOpen}
             >
                 {children}
             </div>
-
-
             <Modal
                 aria-labelledby="transition-modal-title"
                 aria-describedby="transition-modal-description"
                 className={classes.modal}
                 open={open}
+
                 onClose={handleClose}
                 closeAfterTransition
                 BackdropComponent={Backdrop}
@@ -118,280 +105,60 @@ export default function TransitionsModal({children, media_type, id}) {
                             </button>
 
 
-                            {/*</div>*/}
-                            {/*<div className="single-card-modal">*/}
+                            <div className="modal-box-top-img">
+                                <img src={content.poster_path ? `${image_api}/${content.poster_path}` : image_unavailable} alt={content.name || content.title}/>
+                            </div>
+
                             <div className="modal-box">
-                                {/*backdrop_path*/}
 
                                 <div className="modal-box-top">
 
-                                    <div className="modal-box-top-img">
-                                        <img
-                                            src={
-                                                content.poster_path
-                                                    ? `${image_api}/${content.poster_path}`
-                                                    : image_unavailable
-                                            }
-                                            alt={content.name || content.title}
-                                            // className="ContentModal__portrait"
-                                        />
-                                    </div>
+
 
                                     <div className="modal-box-top-title">
 
                                         <div className="modal-box-top-title-1">
-                                            <span>
-                                            {content.name || content.title} (
-                                                {(
-                                                    content.first_air_date ||
-                                                    content.release_date ||
-                                                    "-----"
-                                                ).substring(0, 4)}
-                                                )</span>
+                                            <span>{content.name || content.title}({(content.first_air_date || content.release_date || "-----").substring(0, 4)})</span>
                                         </div>
-
                                         <div className="modal-box-bottom-more_info">
                                             <span>{content.release_date}</span>
                                             <div className="space-line"></div>
                                             <span>{content.vote_average}</span>
                                             <div className="space-line"></div>
-                                            <span>{content.runtime ? content.runtime + "min" : "" } </span>
+                                            <span>{content.runtime ? content.runtime + "min" : ""} </span>
                                         </div>
-
                                     </div>
-
 
                                 </div>
 
                                 <div className="modal-box-bottom">
                                     <div className="modal-box-bottom-description">
-                                       <div>
-                                           <span>Description</span>
-                                           <p className="modal-box-bottom-description-text">{content.overview}</p>
-                                       </div>
+                                        <div>
+                                            <span>Description</span>
+                                            <p className="modal-box-bottom-description-text">{content.overview}</p>
+                                        </div>
 
-                                        <ThemeProvider theme={darkRedTheme}>
-                                        <Button
-                                            variant="outlined"
-                                            startIcon={<YouTubeIcon/>}
-                                            className="watch-the-trailer-btn"
-                                            color="secondary"
-                                            target="__blank"
-                                            href={`https://www.youtube.com/watch?v=${video}`}
-                                        >Watch the Trailer
-                                        </Button>
-                                        </ThemeProvider>
+                                        <div>
+                                            <ThemeProvider theme={darkRedTheme}>
+                                                <Button
+                                                    variant="outlined"
+                                                    startIcon={<YouTubeIcon/>}
+                                                    className="watch-the-trailer-btn"
+                                                    color="secondary"
+                                                    target="__blank"
+                                                    href={`https://www.youtube.com/watch?v=${video}`}
+                                                >Watch the Trailer
+                                                </Button>
+                                            </ThemeProvider>
+                                        </div>
 
                                     </div>
-                                    {/*<Button*/}
-                                    {/*    variant="contained"*/}
-                                    {/*    startIcon={<YouTubeIcon/>}*/}
-                                    {/*    className="watch-the-trailer-btn"*/}
-                                    {/*    color="secondary"*/}
-                                    {/*    target="__blank"*/}
-                                    {/*    href={`https://www.youtube.com/watch?v=${video}`}*/}
-                                    {/*>Watch the Trailer*/}
-                                    {/*</Button>*/}
-
-
-                                    {/*<div className="modal-box-bottom-more_info">*/}
-                                    {/*    <span>{content.release_date}</span>*/}
-                                    {/*    <div className="space-line"></div>*/}
-                                    {/*    <span>{content.vote_average}</span>*/}
-                                    {/*    <div className="space-line"></div>*/}
-                                    {/*    <span>{content.runtime} min</span>*/}
-                                    {/*</div>*/}
-
                                 </div>
-
                             </div>
-
-
-                            {/*<div className="single-card-box">*/}
-
-
-                            {/*<div className="space-line"></div>*/}
-                            {/*<span>{content.original_language}</span>*/}
-                            {/*<i className="gg-shape-circle"></i>*/}
-                            {/*<span>*/}
-                            {/*    {content.popularity}*/}
-                            {/*</span>*/}
-                            {/*<i className="gg-shape-circle"></i>*/}
-                            {/*/!*<span>release_date {content.adult}</span>*!/*/}
-                            {/*<span>*/}
-                            {/*    {content.vote_count}*/}
-                            {/*</span>*/}
-                            {/*<i className="gg-shape-circle"></i>*/}
-
-
-                            {/*<img*/}
-                            {/*    src={*/}
-                            {/*        content.poster_path*/}
-                            {/*            ? `${image_api}/${content.poster_path}`*/}
-                            {/*            : image_unavailable*/}
-                            {/*    }*/}
-                            {/*    alt={content.name || content.title}*/}
-                            {/*    className="ContentModal__portrait"*/}
-                            {/*/>*/}
-                            {/*<img className="" src={poster ? `${image_api}${poster}` : image_unavailable} alt={title}/>*/}
-
-                            {/*<img*/}
-                            {/*    src={*/}
-                            {/*        content.backdrop_path*/}
-                            {/*            // ? `${img_500}/${content.backdrop_path}`*/}
-                            {/*            // : unavailableLandscape*/}
-                            {/*    }*/}
-                            {/*    alt={content.name || content.title}*/}
-                            {/*    className="ContentModal__landscape"*/}
-                            {/*/>*/}
-                            {/*<div className="ContentModal__about">*/}
-
-                            {/*              <span className="ContentModal__title">*/}
-                            {/*  {content.name || content.title} (*/}
-                            {/*                  {(*/}
-                            {/*                      content.first_air_date ||*/}
-                            {/*                      content.release_date ||*/}
-                            {/*                      "-----"*/}
-                            {/*                  ).substring(0, 4)}*/}
-                            {/*                  )*/}
-                            {/*</span>*/}
-                            {/*{content.tagline && (*/}
-                            {/*    <i className="tagline">{content.tagline}</i>*/}
-                            {/*)}*/}
-
-
-                            {/*<span className="ContentModal__description">*/}
-                            {/*  {content.overview}*/}
-                            {/*</span>*/}
-
-
-                            {/*<Button*/}
-                            {/*    variant="contained"*/}
-                            {/*    // startIcon={<YouTubeIcon />}*/}
-                            {/*    color="secondary"*/}
-                            {/*    target="__blank"*/}
-                            {/*    href={`https://www.youtube.com/watch?v=${video}`}*/}
-                            {/*>*/}
-                            {/*    Watch the Trailer*/}
-                            {/*</Button>*/}
-
-
-                            {/*</div>*/}
-                            {/*<button onClose={handleClose}>close</button>*/}
-                            {/*</div>*/}
-
-                            {/*<button onClick={handleClose}>close</button>*/}
-
                         </div>
-
                     )}
-
                 </Fade>
             </Modal>
         </>
     );
 }
-//bg-image
-// <div className="modal-box-top-b_img">
-//     <img
-//         src={
-//             content.backdrop_path
-//                 ? `${image_api}/${content.backdrop_path}`
-//                 : image_unavailable
-//         }
-//         alt={content.name || content.title}
-//         // className="ContentModal__portrait"
-//     />
-
-
-// import * as React from 'react';
-// import Backdrop from '@mui/material/Backdrop';
-// import Box from '@mui/material/Box';
-// import Modal from '@mui/material/Modal';
-// import Fade from '@mui/material/Fade';
-// import Button from '@mui/material/Button';
-// import Typography from '@mui/material/Typography';
-// import {makeStyles} from "@material-ui/core";
-// import axios from "axios";
-// import {useEffect, useState} from "react";
-//
-// const useStyles = makeStyles((theme) => ({
-//     modal: {
-//         display: "flex",
-//         alignItems: "center",
-//         justifyContent: "center",
-//     },
-//     paper: {
-//         width: "90%",
-//         height: "80%",
-//         backgroundColor: "#39445a",
-//         border: "1px solid #282c34",
-//         borderRadius: 10,
-//         color: "white",
-//         boxShadow: theme.shadows[5],
-//         padding: theme.spacing(1, 1, 3),
-//     },
-// }));
-//
-// export default function ComponentModal({children, media_type, id}) {
-//     const classes = useStyles();
-//     const [open, setOpen] = React.useState(false);
-//     const [content, setContent] = useState();
-//     const [video, setVideo] = useState();
-//     const handleOpen = () => setOpen(true);
-//     const handleClose = () => setOpen(false);
-//
-//     const fetchData = async () => {
-//         const {data} = await axios.get(
-//             `https://api.themoviedb.org/3/${media_type}/${id}?api_key=76578856efa3b3119d5ebe76dc5498b0&language=en-US`
-//         );
-//         setContent(data);
-//     }
-//
-//     const fetchVideo = async () => {
-//         const {data} = await axios.get(
-//             `https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=76578856efa3b3119d5ebe76dc5498b0&language=en-US`
-//         );
-//         setContent(data.results[0]?.key);
-//     }
-//     useEffect(() => {
-//             fetchData();
-//             fetchVideo();
-//     }, []);
-//
-//     // useEffect(() => {
-//     //     return () => {
-//     //         fetchData();
-//     //         fetchVideo();
-//     //     };
-//     // }, []);
-//
-//
-//
-//     return (
-//         <div>
-//             <Button onClick={handleOpen} className="single-card-box">
-//                 {children}
-//             </Button>
-//             <Modal
-//                 aria-labelledby="transition-modal-title"
-//                 aria-describedby="transition-modal-description"
-//                 open={open}
-//                 onClose={handleClose}
-//                 closeAfterTransition
-//                 BackdropComponent={Backdrop}
-//                 BackdropProps={{
-//                     timeout: 500,
-//                 }}
-//             >
-//                 <Fade in={open}>
-//                     {content && (
-//                         <div className={classes.paper}> </div>
-//                         <div className="ContentModal"> </div>
-//                         <img src="{content.poster_path}" alt=""/>
-//                     )}
-//                 </Fade>
-//             </Modal>
-//         </div>
-//     );
-// }

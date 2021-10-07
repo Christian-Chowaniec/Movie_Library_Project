@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import SingleCard from "../singleCard/single-card";
 import CustomPagination from "../pagination/CustomPagination";
-// import addToMyList from "../singleCard/single-card";
 
 const Home = () => {
     const [content, setContent] = useState([]);
@@ -46,13 +45,9 @@ const Home = () => {
                     <div className="pagination-container">
                         <CustomPagination setPage={setPage}/>
                     </div>
-
-
                 </div>
             </div>
         </>
-
-
     );
 };
 

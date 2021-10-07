@@ -1,0 +1,41 @@
+@mixin desktop{
+  @media screen and (max-width: 1170px){
+    @content
+  }
+}
+
+@mixin tablet{
+  @media screen and (max-width: 900px){
+    @content
+  }
+}
+
+@mixin smallerTablet{
+  @media screen and (max-width: 600px){
+    @content
+  }
+}
+
+@mixin phone{
+  @media (max-width: 480px){
+    @content
+  }
+}
+
+@mixin smallerPhone{
+  @media (max-width: 380px){
+    @content
+  }
+}
+//nav-item
+//margin-top: 3em;
+//.nav-item .active{
+//  margin-top: 0;
+//
+//}
+
+//@include tablet{
+//  .nav-logo {
+//    flex-grow: 0;
+//  }
+//}
