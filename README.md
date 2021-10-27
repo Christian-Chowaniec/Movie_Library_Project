@@ -1,1 +1,2 @@
-https://cc-movies.netlify.app/
+#CC MOVIES
+live version: https://cc-movies.netlify.app/
