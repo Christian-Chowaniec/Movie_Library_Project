@@ -1,5 +1,11 @@
-# Projekt końcowy kursu CodersLab użyte zostało api z biblioteką filmów
-technologie: react, bootstrap, html, scss
+# Projekt końcowy kursu CodersLab, użyte zostało api z biblioteką filmów
+
+# Użyte technologie:
+- JavaScript (ES6)
+- ReactJS (React Router)
+- CSS/SASS
+- bootstrap
+- html
 
 link na żywo: https://cc-movies.netlify.app/
 
