@@ -1,4 +1,4 @@
-# Projekt końcowy kursu CodersLab, użyte zostało api z biblioteką filmów
+# Projekt końcowy kursu CodersLab, api z biblioteką filmów
 
 # Użyte technologie:
 - JavaScript (ES6)
